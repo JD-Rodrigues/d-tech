@@ -31,9 +31,7 @@ a{
     font-weight: bold;
     display: block;
 }
-
 header{
-    width: 100vw;
     position: fixed;
 }
 
@@ -43,12 +41,13 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     background-color: #1F2124;
-
 }
+
 .container{
     display: flex;
-    width: 100%;
     justify-content: center;
+    width: 100vw;
+
 }
 .container div{
     width: 1080px;
@@ -60,7 +59,6 @@ header{
 }
 #segundo{
     background-color: #110F0B;
-
 }
 
 .menu{
@@ -87,20 +85,17 @@ header{
 /*Inicio da main*/
 
 main{
+margin-top:205px
+}
+
+section{
     width: 1080px;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-section{
-    width: auto;
-    margin-top: 20px
-}
-
 section ul{
     display: flex;
-    width: 1080px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -109,7 +104,7 @@ section ul{
     width: 500px;
     height: 330px;
     background-color: #ffffff;
-    margin: 25px 5px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column
 }

@@ -118,6 +118,7 @@ section ul{
 
 #news2{
     display: flex;
+
 }
 
 #news2 .news{
@@ -130,4 +131,24 @@ section ul{
     width:15vw;
     color: #ffffff;
 
+}
+
+/* inicio news3 */
+
+#news3{
+    width: 100%;
+    padding: 0 30px;
+    background-color: #1D1B12;
+}
+#news3 ul{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#news3 .news{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    margin: 20px 0;
 }

@@ -152,3 +152,33 @@ section ul{
     width: 330px;
     margin: 20px 0;
 }
+
+/*inicio new3*/
+
+#news4{
+    display: flex;
+    justify-content: space-between
+}
+#news4 ul{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+
+}
+
+#news4 .noticia-img{
+    width: 50%;
+}
+
+#news4 .block-lateral{
+    width: 30%;
+}
+
+.block-lateral .news{
+    display: flex;
+    flex-direction: column;
+}
+
+#news4 .block-lateral .noticia-img{
+    width: 100%;
+}

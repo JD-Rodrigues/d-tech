@@ -85,28 +85,49 @@ header{
 /*Inicio da main*/
 
 main{
+width:1080px;
 margin-top:205px
 }
 
-section{
-    width: 1080px;
-    flex-wrap: wrap;
-    justify-content: center;
+section, .block-rank {
+    margin-top: 25px;
 }
 
 section ul{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
+#news1 ul{
+    justify-content: space-between;
 
+}
 .news{
-    width: 500px;
-    height: 330px;
     background-color: #ffffff;
     margin-top: 25px;
     display: flex;
-    flex-direction: column
+}
+
+#news1 .news{
+    width: 500px;
+    height: 330px;
+    flex-direction: column;
 }
 
 /*news 2*/
+
+
+#news2{
+    display: flex;
+}
+
+#news2 .news{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+.block-rank{
+    flex-direction: column;
+    width:15vw;
+    color: #ffffff;
+
+}

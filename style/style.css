@@ -13,7 +13,12 @@ body {
 }
 
 #logo{
-    background-color: #ffffff;
+    align-items: center;
+    color: #15f5f5;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'buntu';
+    
     width: 10vw;
     
 }

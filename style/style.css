@@ -8,7 +8,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 
-    background-color: #282830;
+    background-color: #ffffff;
    
 }
 
@@ -20,6 +20,7 @@ body {
 
 li, .menu-item {
     display: block;
+    margin-right: 15px;
 }
 
 #menu-secundario .menu-item a{
@@ -30,6 +31,7 @@ a{
     text-decoration: none;
     font-weight: bold;
     display: block;
+    font-family: 'ubuntu';
 }
 header{
     position: fixed;
@@ -41,12 +43,14 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     background-color: #1F2124;
+    height: auto
 }
 
 .container{
     display: flex;
     justify-content: center;
     width: 100vw;
+    align-items: center;
 
 }
 .container div{
@@ -57,6 +61,11 @@ header{
     display: flex;
     justify-content:center;
 }
+form.busca {
+    display: flex;
+    align-items: center;
+}
+
 #segundo{
     background-color: #110F0B;
 }
@@ -67,7 +76,7 @@ header{
     height: auto;
     align-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #menu-principal{
@@ -182,3 +191,4 @@ section ul{
 #news4 .block-lateral .noticia-img{
     width: 100%;
 }
+

@@ -1,0 +1,6 @@
+ // const data2 = await getData(2)
+  // const data3 = await getData(3)
+  // const data4 = await getData(4)
+  // const data5 = await getData(5)
+  // const data6 = await getData(6)
+  // const data7 = await getData(7)

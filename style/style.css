@@ -26,6 +26,9 @@ li, .menu-item {
     font-weight: bold;
         
 }
+.busca{
+    width: 150px
+}
 
 #menu-secundario .menu-item a{
     color: #3bb4b4
@@ -64,12 +67,53 @@ header{
 #primeiro div{
     display: flex;
     justify-content:center;
+    position: relative;
 }
 form.busca {
     display: flex;
     align-items: center;
     margin-left: 25px;
+    width: 280px;
+    
+
 }
+.busca label, input{
+    padding: 6px 10px 5px 16px;    border-radius: 25px;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    line-height: 19px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    color: #b4b4b4;
+    outline: 0;
+}
+.busca label{
+    border: 1px solid #fff;
+    position: relative;
+    
+    
+}
+
+.bottom{
+    padding: 5px 5px ;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background: #3bb4b4;
+    line-height: 19px;
+    box-shadow: 0 0 0 0;
+    padding-right: 20px;
+    position: absolute;
+    outline: 0;
+    right: 3px;
+    color: #fff
+    
+    
+}
+
 
 #segundo{
     background-color: #110F0B;

@@ -7,25 +7,24 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     background-color: #ffffff;
-   
 }
 
-#logo{
+.container .logo{
     align-items: center;
     color: #15f5f5;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'buntu';
-    
     width: 10vw;
-    
 }
 
 li, .menu-item {
     display: block;
-    margin-right: 15px;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+        
 }
 
 #menu-secundario .menu-item a{
@@ -69,6 +68,7 @@ header{
 form.busca {
     display: flex;
     align-items: center;
+    margin-left: 25px;
 }
 
 #segundo{
@@ -101,6 +101,10 @@ form.busca {
 main{
 width:1080px;
 margin-top:205px
+}
+
+.title-logo{
+
 }
 
 section, .block-rank {

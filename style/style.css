@@ -167,10 +167,21 @@ section ul{
     justify-content: space-between;
 
 }
+
 .news{
-    background-color: #ffffff;
     margin-top: 25px;
     display: flex;
+    align-self: stretch;
+    max-width: 100%;
+    border-style: none;
+
+}
+
+img{
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 6px;
 }
 
 #news1 .news{

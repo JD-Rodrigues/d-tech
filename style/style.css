@@ -39,7 +39,7 @@ a{
     font-weight: bold;
     display: block;
     font-family: 'ubuntu';
-    color: rgb(0, 0, 0)
+    color:#000000;
 }
 
 header{
@@ -155,6 +155,9 @@ margin-top:125px
     font-family: 'ubuntu';
     font-weight: bolts;
     font-size: 48px;
+}
+
+.news-title-logo{
     
 }
 

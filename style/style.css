@@ -158,6 +158,13 @@ margin-top:125px
 }
 
 .news-title{
+    font-size: 22px;
+    line-height:30px;
+    display: block;
+    font-weight: bold;
+}
+
+.news-description{
 
 }
 

@@ -39,7 +39,9 @@ a{
     font-weight: bold;
     display: block;
     font-family: 'ubuntu';
+    color: rgb(0, 0, 0)
 }
+
 header{
     position: fixed;
 }
@@ -207,7 +209,6 @@ img{
 .block-rank{
     flex-direction: column;
     width:15vw;
-
 }
 
 /* inicio news3 */

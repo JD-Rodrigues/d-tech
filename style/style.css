@@ -223,6 +223,10 @@ img{
     
 }
 
+section{
+    margin-top:25px;
+}
+
 #news3 .news{
     display: flex;
     flex-direction: column;

@@ -1,7 +1,7 @@
 onload = ()=> fillHome()
 
 const getData = async () => {
-  const data = await fetch(`https://newsapi.org/v2/top-headlines?country=br&category=technology&pageSize=100&apiKey=331dbd74054842c7951471628b189d72`)
+  const data = await fetch(`http://newsapi.org/v2/top-headlines?country=br&category=technology&pageSize=100&apiKey=331dbd74054842c7951471628b189d72`)
   const jsonData =  await data.json()
 
   return jsonData.articles

@@ -46,8 +46,6 @@ li, .menu-item {
 
 a{
     text-decoration: none;
-    font-weight: bold;
-    font-family: 'Ubuntu';
     color:#000000;
 }
 
@@ -162,17 +160,22 @@ main{
     margin-top: 25px;
 }
 
-.link-card .news-card{
+.news .news-card{
     width: 100%;
     height: auto;
     border-radius: 6px;
 }
 
+.news-content{
+    margin:25px 0;
+    font-size: 21px;
+    font-family: 'ubuntu';
+    color: #727272;
+}
+
 /*footer*/
 
-
 .main-footer{
-
     height: 50px;
     width: 100%;
     background-color: #1e1e26;

@@ -43,10 +43,6 @@ li, .menu-item {
     width: 150px
 }
 
-#menu-secundario .menu-item a{
-    color: #3bb4b4
-}
-
 a{
     text-decoration: none;
     font-weight: bold;
@@ -129,11 +125,6 @@ form.search {
     
 }
 
-
-#segundo{
-    background-color: #110F0B;
-}
-
 .menu{
     display: flex;
     width: 1080px;
@@ -149,10 +140,6 @@ form.search {
 
 #menu-principal a{
     color: #ffffff;
-}
-
-#menu-secundario{
-    height: 70px;
 }
 
 /*Inicio da main*/

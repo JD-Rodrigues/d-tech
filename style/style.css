@@ -184,7 +184,7 @@ main{
 
 }
 
-section, .block-rank {
+section, .news2-top-five {
     margin-top: 2px;
 }
 
@@ -232,7 +232,7 @@ img{
     flex-direction: column;
     width: 360px;
 }
-.block-rank{
+.news2-top-five{
     flex-direction: column;
     width: 40vw;
 }
@@ -251,7 +251,7 @@ img{
     align-items: center;
 }
 
-.block-rank .rank-position{
+.news2-top-five .rank-position{
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
@@ -263,7 +263,7 @@ img{
     margin-left: 5px;
 }
 
-.block-rank .rank-link{
+.news2-top-five .rank-link{
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: 16px;
@@ -298,31 +298,42 @@ section{
 
 /*inicio new3*/
 
-#news4{
+#news4 {
+    width: 100%;
     display: flex;
-    justify-content: space-between
+    column-gap: 20px;
 }
-#news4 ul{
+
+.news4-list {
+    width: 70%;
     display: flex;
     flex-direction: column;
-    width: 65%;
-
 }
 
-#news4 .news-card{
+.news4-list .news {
+    display: flex;
+    column-gap: 20px;
+}
+
+.news4-list .news-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.news4-list .news-card {
     width: 50%;
 }
 
-#news4 .block-lateral{
+.block-lateral {
     width: 30%;
-}
-
-.block-lateral .news{
     display: flex;
     flex-direction: column;
+    row-gap: 40px;
 }
 
-#news4 .block-lateral .news-card{
-    width: 100%;
+.block-lateral .news {
+    display: flex;
+    flex-direction: column;
 }
 

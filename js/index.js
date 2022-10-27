@@ -22,14 +22,22 @@ const fillHome = async () => {
   </section>
   <section id="news2">
   <ul class="news2-list"></ul>
+  <ul class="news2-top-five"></ul>
   </section>
   <section id="news3">
+  <ul class="top-videos"></ul>
   </section>
   <section id="news4">
+  <ul class="news4-list"></ul>
+  <ul class="block-lateral"></ul>
   </section>
   `
   const news1List = document.querySelector('.news1-list')
   const news2List = document.querySelector('.news2-list')
+  const topFiveArticles = document.querySelector('.news2-top-five')
+  const topVideosList = document.querySelector('.top-videos')
+  const news4List = document.querySelector('.news4-list')
+  const blockLateral = document.querySelector('.block-lateral')
   
 
 
@@ -38,14 +46,15 @@ const fillHome = async () => {
 
   for (let index = 0; index < 2; index++) {
     news1List.innerHTML += `
-    <li>
+    <li data-article = "allArticles[${index}]">
         <div class="news">
           <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
-          <h2 class="news-title">TITULO DA NOTICIA</h2>
-          <p class="news-description">Lorem ipsum taciti enim tellus risus, tempus volutpat gravida massa bibendum, morbi ligula aliquam quis.</p>
+          <h2 class="news-title">${allArticles[index].title}</h2>
+          <p class="news-description">${allArticles[index].description.substring(0,120)}...</p>
         </div>
     </li>
     `
+
     // console.log(allData[index].title)
     // console.log('========================')    
   }
@@ -53,14 +62,27 @@ const fillHome = async () => {
   console.log("QUATRO NOTÍCIAS DA SEGUNDA SEÇÃO:")
 
   for (let index = 2; index < 6; index++) {
-    console.log(allArticles[index].title)
-    console.log('========================')    
+    news2List.innerHTML += `
+    <li data-article = "allArticles[${index}]">
+      <div class="news">
+        <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
+        <h2 class="news-title">${allArticles[index].title}</h2>
+        <p class="news-description">${allArticles[index].description.substring(0,80)}...
+        </p>
+      </div>
+    </li>
+    `
+    // console.log(allArticles[index].title)
+    // console.log('========================')    
   }
 
   console.log('TOP FIVE:')
   for (let index = 0; index < 5; index++) {
-    console.log(allData[index].title)
-    console.log('========================')    
+    topFiveArticles.innerHTML += `
+    <li class="selecao" data-article = "allArticles[${index}]">${allArticles[index].title}</li>
+    `
+    // console.log(allData[index].title)
+    // console.log('========================')    
   }
   
 
@@ -80,23 +102,38 @@ const fillHome = async () => {
 
 
   console.log('TOP VIDEOS')
-  topVideos.forEach(video=>{
-    console.log(video.title)
-    console.log('______________________')
+  topVideos.forEach((video, index)=>{
+    topVideosList.innerHTML += `
+    <li data-article = "topVideos[${index}]">
+      <div class="news">
+        <img class="news-card" src="${video.urlToImage ? video.urlToImage : 'https://www.technogeekzone.com/wp-content/uploads/2015/09/youtube2Bimage.png'}" alt="">
+        <h2 class="news-title">${video.title}</h2>
+        <p class="news-description">${video.description ? video.description : ""}</p>
+      </div>
+    </li>
+    `
   }
   )
 
 
   console.log('TRÊS POSTS COM LAYOUT ESTILO BLOG')
-  for (let index = 6; index < 9; index++) {
-    console.log(allArticles[index].title)
-    console.log('______________________')
+  for (let index = 6; index < 12; index++) {
+    news4List.innerHTML+=`
+    <li>
+      <div class="news"><img class="news-card" src="${allArticles[index].urlToImage}" alt=""><div class="news-info"><h2 class="news-title">${allArticles[index].title}</h2><p class="news-description">${allArticles[index].description.substring(0,160)}...</p></div></div> 
+    </li>
+    `
   }
 
   console.log('TRÊS POSTS AO LADO DOS BLOG POSTS')
-  for (let index = 9; index < 12; index++) {
-    console.log(allArticles[index].title)
-    console.log('______________________')
+  for (let index = 12; index < 15; index++) {
+    blockLateral.innerHTML += `
+    <li>
+      <div class="news">
+        <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
+        <h2 class="news-title">${allArticles[index].title}</h2><p class="news-description">${allArticles[index].description.substring(0,80)}...</p></div>
+    </li>
+    `
   }
 
   console.log(allData.length)

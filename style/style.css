@@ -20,7 +20,7 @@ body {
     color: #15f5f5;
     font-weight: bold;
     font-size: 20px;
-    font-family: 'buntu';
+    font-family: 'Ubuntu';
     width: 10vw;
 }
 
@@ -184,11 +184,12 @@ main{
 
 }
 
-section, .block-rank {
+
+.section-news, .block-rank {
     margin-top: 2px;
 }
 
-section ul{
+.section-news ul{
     display: flex;
     flex-wrap: wrap;
 }
@@ -213,7 +214,7 @@ img{
     border-radius: 6px;
 }
 
-#news1 .news{
+.section-news.first .news{
     width: 500px;
     height: auto;
     flex-direction: column;
@@ -285,9 +286,10 @@ img{
     
 }
 
-section{
+.section-news{
     margin-top:25px;
 }
+
 
 #news3 .news{
     display: flex;

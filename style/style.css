@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:regular,&subset=Latin);
+
 *{
     margin: 0;
     padding: 0
@@ -10,18 +12,10 @@ body {
     background-color: #ffffff;
 }
 
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(https://fonts.googleapis.com/css?family=Ubuntu);
-}
 
 .container .logo{
-    align-items: center;
-    color: #15f5f5;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Ubuntu';
-    width: 10vw;
+    flex-direction: column;
+    width: 15vw;
 }
 
 li, .menu-item {

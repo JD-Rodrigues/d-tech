@@ -10,6 +10,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     background-color: #ffffff;
+    height: 100%;
 }
 
 
@@ -156,4 +157,20 @@ main{
     font-family: 'ubuntu';
     font-weight: bolts;
     font-size: 48px;
+}
+
+/*footer*/
+
+body .main-footer{
+    align-content: flex-end;
+
+}
+.main-footer{
+
+    height: 50px;
+    width: 100%;
+    background-color: #1e1e26;
+    position: fixed;
+    bottom:0;
+    left:0;
 }

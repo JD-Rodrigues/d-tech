@@ -15,7 +15,11 @@ body {
 
 .container .logo{
     flex-direction: column;
-    width: 15vw;
+    width: 10vw;
+}
+
+.logo img{
+    margin-bottom: 5px;
 }
 
 li, .menu-item {
@@ -201,7 +205,7 @@ main{
 
 }
 
-img{
+.news-card{
     display: block;
     width: 100%;
     margin-bottom: 12px;

@@ -1,0 +1,143 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:regular,&subset=Latin);
+
+*{
+    margin: 0;
+    padding: 0
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+
+.container .logo{
+    flex-direction: column;
+    width: 10vw;
+}
+
+.logo .card-logo{
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+.logo span{
+    font-family: "Ubuntu";
+    font-weight: bold;
+    color: #3bb4b4;
+    width: 10vw;
+
+}
+
+
+li, .menu-item {
+    display: block;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search{
+    width: 150px
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-family: 'Ubuntu';
+    color:#000000;
+}
+
+header{
+    position: fixed;
+}
+
+#menu{
+    height: 205px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1F2124;
+    height: auto
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+
+}
+.container div{
+    width: 1080px;
+}
+
+#primeiro div{
+    display: flex;
+    justify-content:center;
+    position: relative;
+}
+form.search {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    width: 280px;
+    
+
+}
+.box-search, .fiel-search{
+    padding: 6px 10px 5px 16px;    
+    border-radius: 25px;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    line-height: 19px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    color: #b4b4b4;
+    outline: 0;
+}
+.box-search{
+    border: 1px solid #fff;
+    position: relative;
+    
+    
+}
+
+.bottom{
+    padding: 5px 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background: #3bb4b4;
+    line-height: 19px;
+    box-shadow: 0 0 0 0;
+    padding-right: 20px;
+    position: absolute;
+    outline: 0;
+    right: 3px;
+    color: #fff;
+    
+}
+
+.menu{
+    display: flex;
+    width: 1080px;
+    height: auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-principal{
+    height: 100px;
+}
+
+#menu-principal a{
+    color: #ffffff;
+}

@@ -71,6 +71,7 @@ header{
     align-items: center;
 
 }
+
 .container div{
     width: 1080px;
 }
@@ -88,6 +89,7 @@ form.search {
     
 
 }
+
 .box-search, .fiel-search{
     padding: 6px 10px 5px 16px;    
     border-radius: 25px;
@@ -101,11 +103,12 @@ form.search {
     color: #b4b4b4;
     outline: 0;
 }
+
 .box-search{
     border: 1px solid #fff;
     position: relative;
     
-    
+   
 }
 
 .bottom{
@@ -122,7 +125,7 @@ form.search {
     outline: 0;
     right: 3px;
     color: #fff;
-    
+   
 }
 
 .menu{
@@ -187,18 +190,16 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
+
 #news1 ul{
     justify-content: space-between;
-
 }
 
 .news{
-    
     display: flex;
     align-self: stretch;
     max-width: 100%;
     border-style: none;
-
 }
 
 .news-card{
@@ -226,6 +227,7 @@ main{
     flex-direction: column;
     width: 360px;
 }
+
 .second .news-description{
     margin-bottom: 10px;
 }
@@ -234,6 +236,7 @@ main{
     flex-direction: column;
     width: 40vw;
 }
+
 .rank-title{
     display: block;
     font-size: 20px;
@@ -278,10 +281,11 @@ main{
     padding: 0 30px;
     background-color: #1D1B12;
 }
+
 #news3 ul{
     display: flex;
     justify-content: space-around;
-    
+   
 }
 
 .section-news{

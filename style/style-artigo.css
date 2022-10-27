@@ -141,3 +141,19 @@ form.search {
 #menu-principal a{
     color: #ffffff;
 }
+
+/*Inicio da main*/
+
+main{
+    width:1080px;
+    margin-top:125px;
+    margin-bottom:50px;
+}
+
+.title-logo{
+    border-left: 5px solid #3bb4b4;
+    padding: 0 3px;
+    font-family: 'ubuntu';
+    font-weight: bolts;
+    font-size: 48px;
+}

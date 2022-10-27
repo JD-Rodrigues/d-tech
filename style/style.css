@@ -238,7 +238,7 @@ main{
     flex-direction: column;
     width: 360px;
 }
-.section-news .news-description{
+.second .news-description{
     margin-bottom: 10px;
 }
 
@@ -312,7 +312,7 @@ main{
     color: #fff;
 }
 
-/*inicio new3*/
+/*inicio new4*/
 
 #news4{
     display: flex;
@@ -325,8 +325,8 @@ main{
 
 }
 
-#news4 .news-card{
-    width: 50%;
+#news4 .article{
+    margin-left: 10px;
 }
 
 #news4 .block-lateral{

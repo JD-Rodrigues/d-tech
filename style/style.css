@@ -188,8 +188,6 @@ main{
     color: #747478;
     padding: 5px 0 0;
     font-family: 'ubuntu';
-
-
 }
 
 
@@ -233,7 +231,6 @@ main{
 
 #news2{
     display: flex;
-
 }
 
 #news2 .news{
@@ -241,6 +238,10 @@ main{
     flex-direction: column;
     width: 360px;
 }
+.section-news .news-description{
+    margin-bottom: 10px;
+}
+
 .block-rank{
     flex-direction: column;
     width: 40vw;

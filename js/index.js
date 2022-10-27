@@ -21,6 +21,7 @@ const fillHome = async () => {
   <ul class="news1-list"></ul>
   </section>
   <section id="news2">
+  <ul class="news2-list"></ul>
   </section>
   <section id="news3">
   </section>
@@ -28,6 +29,7 @@ const fillHome = async () => {
   </section>
   `
   const news1List = document.querySelector('.news1-list')
+  const news2List = document.querySelector('.news2-list')
   
 
 
@@ -37,11 +39,11 @@ const fillHome = async () => {
   for (let index = 0; index < 2; index++) {
     news1List.innerHTML += `
     <li>
-      <div class="news">
-        <a href=""><img class="news-card" src="${allArticles[index].urlToImage}" alt=""></a>
-        <h2 class="news-title"><a href="">TITULO DA NOTICIA</a></h2>
-        <p class="news-description">Lorem ipsum taciti enim tellus risus, tempus volutpat gravida massa bibendum, morbi ligula aliquam quis.</p>
-      </div>
+        <div class="news">
+          <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
+          <h2 class="news-title">TITULO DA NOTICIA</h2>
+          <p class="news-description">Lorem ipsum taciti enim tellus risus, tempus volutpat gravida massa bibendum, morbi ligula aliquam quis.</p>
+        </div>
     </li>
     `
     // console.log(allData[index].title)

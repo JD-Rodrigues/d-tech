@@ -306,6 +306,10 @@ main{
     margin: 20px 0;
 }
 
+.third .news-title a{
+    color: #fff;
+}
+
 /*inicio new3*/
 
 #news4{

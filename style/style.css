@@ -18,9 +18,19 @@ body {
     width: 10vw;
 }
 
-.logo img{
+.logo .card-logo{
+    height: 50%;
     margin-bottom: 5px;
 }
+
+.logo span{
+    font-family: "Ubuntu";
+    font-weight: bold;
+    color: #3bb4b4;
+    width: 10vw;
+
+}
+
 
 li, .menu-item {
     display: block;

@@ -47,7 +47,6 @@ li, .menu-item {
 a{
     text-decoration: none;
     font-weight: bold;
-    display: block;
     font-family: 'Ubuntu';
     color:#000000;
 }
@@ -155,16 +154,23 @@ main{
     border-left: 5px solid #3bb4b4;
     padding: 0 3px;
     font-family: 'ubuntu';
-    font-weight: bolts;
+    font-weight: bold;
     font-size: 48px;
+}
+
+.section-news {
+    margin-top: 25px;
+}
+
+.link-card .news-card{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
 
 /*footer*/
 
-body .main-footer{
-    align-content: flex-end;
 
-}
 .main-footer{
 
     height: 50px;

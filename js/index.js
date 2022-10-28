@@ -1,28 +1,34 @@
 onload = ()=> fillHome()
 
-const getData = async () => {
-  const data = await fetch(`https://newsapi.org/v2/top-headlines?country=br&category=technology&pageSize=100&apiKey=331dbd74054842c7951471628b189d72`)
+const getData = async (offset) => {
+  const data = await fetch(`https://api.bing.microsoft.com/v7.0/news?mkt=en-us&offset=${offset}`, {method: "GET", headers: { 'Ocp-Apim-Subscription-Key': "7145ac6ef3f447b7895999375761f3db"}})
   const jsonData =  await data.json()
+  
+  console.log(await jsonData)
 
-  return jsonData.articles
+  return jsonData.value
 }
 
 
 
 const fillHome = async () => {
   const main = document.querySelector('.main')
-  const allData = await getData()
-  const allArticles = await allData.filter(data=> data.urlToImage !== null)  
+  const allData = await getData(0)
+  const allData2 = await getData(10)
+  const allArticles = [...await allData, ... await allData2]
   const topVideos = []
-
+ 
   main.innerHTML = `
   <h1 class="title-logo">Tech Office</h1>
-  <section id="news1">
+  <section id="news1" class="section-news first">
   <ul class="news1-list"></ul>
   </section>
-  <section id="news2">
+  <section id="news2" class="section-news second">
   <ul class="news2-list"></ul>
-  <ul class="news2-top-five"></ul>
+  <ul class="news2-top-five block-rank">
+    <h2 class="rank-title">Em alta </h2>
+  </ul>
+  
   </section>
   <section id="news3">
   <ul class="top-videos"></ul>
@@ -47,11 +53,13 @@ const fillHome = async () => {
   for (let index = 0; index < 2; index++) {
     news1List.innerHTML += `
     <li data-article = "allArticles[${index}]">
-        <div class="news">
-          <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
-          <h2 class="news-title">${allArticles[index].title}</h2>
-          <p class="news-description">${allArticles[index].description.substring(0,120)}...</p>
-        </div>
+      <div class="news">
+        <img class="news-card"
+        src="${allArticles[index].image.thumbnail.contentUrl}" alt=""
+        >
+        <h2 class="news-title"><a href="">${allArticles[index].name}</a></h2>
+        <p class="news-description">${allArticles[index].description.substring(0,80)}</p>
+      </div>
     </li>
     `
 
@@ -65,11 +73,10 @@ const fillHome = async () => {
     news2List.innerHTML += `
     <li data-article = "allArticles[${index}]">
       <div class="news">
-        <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
-        <h2 class="news-title">${allArticles[index].title}</h2>
-        <p class="news-description">${allArticles[index].description.substring(0,80)}...
-        </p>
-      </div>
+        <img class="news-card" src="${allArticles[index].image.thumbnail.contentUrl}" alt="">
+        <h2 class="news-title"><a href="">${allArticles[index].name}</a></h2>
+        <p class="news-description">${allArticles[index].description.substring(0,80)}</p>
+</div>
     </li>
     `
     // console.log(allArticles[index].title)
@@ -79,7 +86,7 @@ const fillHome = async () => {
   console.log('TOP FIVE:')
   for (let index = 0; index < 5; index++) {
     topFiveArticles.innerHTML += `
-    <li class="selecao" data-article = "allArticles[${index}]">${allArticles[index].title}</li>
+    <li class="rank-position rank-link" data-article = "allArticles[${index}]">${allArticles[index].name}</li>
     `
     // console.log(allData[index].title)
     // console.log('========================')    
@@ -106,10 +113,12 @@ const fillHome = async () => {
     topVideosList.innerHTML += `
     <li data-article = "topVideos[${index}]">
       <div class="news">
-        <img class="news-card" src="${video.urlToImage ? video.urlToImage : 'https://www.technogeekzone.com/wp-content/uploads/2015/09/youtube2Bimage.png'}" alt="">
-        <h2 class="news-title">${video.title}</h2>
-        <p class="news-description">${video.description ? video.description : ""}</p>
-      </div>
+        <img class="news-card"
+        src="${allArticles[index].image.thumbnail.contentUrl}"
+    alt=""></a>
+        <h2 class="news-title"><a href="">${allArticles[index].name}</a></h2>
+        <p class="news-description">${allArticles[index].description}</p>
+</div>
     </li>
     `
   }
@@ -120,7 +129,18 @@ const fillHome = async () => {
   for (let index = 6; index < 12; index++) {
     news4List.innerHTML+=`
     <li>
-      <div class="news"><img class="news-card" src="${allArticles[index].urlToImage}" alt=""><div class="news-info"><h2 class="news-title">${allArticles[index].title}</h2><p class="news-description">${allArticles[index].description.substring(0,160)}...</p></div></div> 
+      <div class="news">
+        <img class="news-card"
+            src="${allArticles[index].image.thumbnail.contentUrl}"
+            alt=""> 
+
+      <div class="article">
+        <h2 class="news-title">
+        ${allArticles[index].name}
+        </h2>
+        <p class="news-description">${allArticles[index].description}</p>
+      </div>
+      </div>
     </li>
     `
   }
@@ -130,7 +150,7 @@ const fillHome = async () => {
     blockLateral.innerHTML += `
     <li>
       <div class="news">
-        <img class="news-card" src="${allArticles[index].urlToImage}" alt="">
+        <img class="news-card" src="${allArticles[index].image.thumbnail.contentUrl}" alt="">
         <h2 class="news-title">${allArticles[index].title}</h2><p class="news-description">${allArticles[index].description.substring(0,80)}...</p></div>
     </li>
     `

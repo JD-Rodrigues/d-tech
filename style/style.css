@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:regular,&subset=Latin);
+
 *{
     margin: 0;
     padding: 0
@@ -10,19 +12,25 @@ body {
     background-color: #ffffff;
 }
 
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(https://fonts.googleapis.com/css?family=Ubuntu);
-}
 
 .container .logo{
-    align-items: center;
-    color: #15f5f5;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Ubuntu';
+    flex-direction: column;
     width: 10vw;
 }
+
+.logo .card-logo{
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+.logo span{
+    font-family: "Ubuntu";
+    font-weight: bold;
+    color: #3bb4b4;
+    width: 10vw;
+
+}
+
 
 li, .menu-item {
     display: block;
@@ -33,10 +41,6 @@ li, .menu-item {
 
 .search{
     width: 150px
-}
-
-#menu-secundario .menu-item a{
-    color: #3bb4b4
 }
 
 a{
@@ -67,6 +71,7 @@ header{
     align-items: center;
 
 }
+
 .container div{
     width: 1080px;
 }
@@ -84,6 +89,7 @@ form.search {
     
 
 }
+
 .box-search, .fiel-search{
     padding: 6px 10px 5px 16px;    
     border-radius: 25px;
@@ -97,11 +103,12 @@ form.search {
     color: #b4b4b4;
     outline: 0;
 }
+
 .box-search{
     border: 1px solid #fff;
     position: relative;
     
-    
+   
 }
 
 .bottom{
@@ -118,12 +125,7 @@ form.search {
     outline: 0;
     right: 3px;
     color: #fff;
-    
-}
-
-
-#segundo{
-    background-color: #110F0B;
+   
 }
 
 .menu{
@@ -143,22 +145,19 @@ form.search {
     color: #ffffff;
 }
 
-#menu-secundario{
-    height: 70px;
-}
-
 /*Inicio da main*/
 
 main{
     width:1080px;
-    margin-top:125px
+    margin-top:125px;
+    margin-bottom:50px;
 }
 
 .title-logo{
     border-left: 5px solid #3bb4b4;
     padding: 0 3px;
     font-family: 'ubuntu';
-    font-weight: bolts;
+    font-weight: bold;
     font-size: 48px;
 }
 
@@ -180,40 +179,37 @@ main{
     color: #747478;
     padding: 5px 0 0;
     font-family: 'ubuntu';
-
-
 }
 
-section, .news2-top-five {
+
+.section-news, .block-rank {
     margin-top: 2px;
 }
 
-section ul{
+.section-news ul{
     display: flex;
     flex-wrap: wrap;
 }
+
 #news1 ul{
     justify-content: space-between;
-
 }
 
 .news{
-    
     display: flex;
     align-self: stretch;
     max-width: 100%;
     border-style: none;
-
 }
 
-img{
+.news-card{
     display: block;
     width: 100%;
     margin-bottom: 12px;
     border-radius: 6px;
 }
 
-#news1 .news{
+.section-news.first .news{
     width: 500px;
     height: auto;
     flex-direction: column;
@@ -224,7 +220,6 @@ img{
 
 #news2{
     display: flex;
-
 }
 
 #news2 .news{
@@ -232,16 +227,24 @@ img{
     flex-direction: column;
     width: 360px;
 }
-.news2-top-five{
+
+.second .news-description{
+    margin-bottom: 10px;
+}
+
+.block-rank{
+    display: flex;
     flex-direction: column;
     width: 40vw;
 }
+
 .rank-title{
     display: block;
     font-size: 20px;
     line-height: 31px;
     margin-bottom: 24px;
     color: #3bb4b4;
+    font-family: 'ubuntu';
 }
 
 .rank-position{
@@ -251,7 +254,7 @@ img{
     align-items: center;
 }
 
-.news2-top-five .rank-position{
+.block-rank .rank-position{
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
@@ -263,7 +266,7 @@ img{
     margin-left: 5px;
 }
 
-.news2-top-five .rank-link{
+.block-rank .rank-link{
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: 16px;
@@ -279,15 +282,17 @@ img{
     padding: 0 30px;
     background-color: #1D1B12;
 }
+
 #news3 ul{
     display: flex;
     justify-content: space-around;
-    
+   
 }
 
-section{
+.section-news{
     margin-top:25px;
 }
+
 
 #news3 .news{
     display: flex;
@@ -296,44 +301,47 @@ section{
     margin: 20px 0;
 }
 
-/*inicio new3*/
-
-#news4 {
-    width: 100%;
-    display: flex;
-    column-gap: 20px;
+.third .news-title a{
+    color: #fff;
 }
 
-.news4-list {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
+/*inicio new4*/
 
-.news4-list .news {
+#news4{
     display: flex;
-    column-gap: 20px;
+    justify-content: space-between
 }
-
-.news4-list .news-info {
-    width: 50%;
+#news4 ul{
     display: flex;
     flex-direction: column;
+    width: 65%;
+
 }
 
-.news4-list .news-card {
-    width: 50%;
+#news4 .article{
+    margin-left: 10px;
 }
 
-.block-lateral {
+#news4 .block-lateral{
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
 }
 
-.block-lateral .news {
+.block-lateral .news{
     display: flex;
     flex-direction: column;
 }
 
+#news4 .block-lateral .news-card{
+    width: 100%;
+}
+
+/*footer*/
+
+.main-footer{
+    height: 50px;
+    width: 100%;
+    background-color: #1e1e26;
+    position: fixed;
+    bottom:0;
+    left:0;
+}

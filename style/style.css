@@ -225,7 +225,7 @@ main{
 #news2 .news{
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 300px;
 }
 
 .second .news-description{
@@ -258,7 +258,6 @@ main{
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
-    margin-right: 12px;
     color: #1e1e26;
 }
 

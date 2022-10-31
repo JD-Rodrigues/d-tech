@@ -5,18 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-Tech News</title>
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/article.css">
 </head>
-<body>
-
-    <link rel="stylesheet" href="/style/style.css">
-
-    
+<body>   
     <header>
-
         <nav id="menu">
             <div class="container" id="primeiro">
                 <div>
-                    <div class="logo">
+                    <div class="logo" onclick="fillHome()">
                         <img class="card-logo"
                             src="https://see.fontimg.com/api/renderfont4/YzxE8/eyJyIjoiZnMiLCJoIjo1MCwidyI6MTAwMCwiZnMiOjUwLCJmZ2MiOiIjMjFDNEM0IiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/RC1UZWNo/robot-9000-italic.png"
                             alt="">
@@ -24,11 +21,11 @@
                         <span>News</span>
                     </div>
                     <ul class="menu" id="menu-principal">
-                        <li class="menu-item"><a href="">Notice 1</a></li>
-                        <li class="menu-item"><a href="">Notice 2</a></li>
-                        <li class="menu-item"><a href="">Notice 3</a></li>
-                        <li class="menu-item"><a href="">Notice 4</a></li>
-                        <li class="menu-item"><a href="">Notice 5</a></li>
+                        <li class="menu-item" onclick="fillHome()" >Home</li>
+                        <li class="menu-item">Notice 2</li>
+                        <li class="menu-item">Notice 3</li>
+                        <li class="menu-item">Notice 4</li>
+                        <li class="menu-item">Notice 5</li>
                     </ul>
 
                     <form action="" class="search">

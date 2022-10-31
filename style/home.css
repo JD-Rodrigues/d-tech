@@ -61,7 +61,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     background-color: #1F2124;
-    height: auto
+    height: auto;
 }
 
 .container{
@@ -135,15 +135,19 @@ form.search {
     align-content: center;
     align-items: center;
     justify-content: center;
+    height: 100px;
+    color: #ffffff;
+    font-family: Ubuntu;
+}
+
+.menu li {
+    cursor: pointer;
 }
 
 #menu-principal{
-    height: 100px;
+   
 }
 
-#menu-principal a{
-    color: #ffffff;
-}
 
 /*Inicio da main*/
 
@@ -225,7 +229,7 @@ main{
 #news2 .news{
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 300px;
 }
 
 .second .news-description{
@@ -258,7 +262,6 @@ main{
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
-    margin-right: 12px;
     color: #1e1e26;
 }
 

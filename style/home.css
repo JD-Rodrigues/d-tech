@@ -61,7 +61,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     background-color: #1F2124;
-    height: auto
+    height: auto;
 }
 
 .container{
@@ -135,15 +135,19 @@ form.search {
     align-content: center;
     align-items: center;
     justify-content: center;
+    height: 100px;
+    color: #ffffff;
+    font-family: Ubuntu;
+}
+
+.menu li {
+    cursor: pointer;
 }
 
 #menu-principal{
-    height: 100px;
+   
 }
 
-#menu-principal a{
-    color: #ffffff;
-}
 
 /*Inicio da main*/
 

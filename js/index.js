@@ -200,6 +200,7 @@ const fillHome = async () => {
 const showArticle = async () => {
   const article = await retrieveData('selectedItem')
   const extracted = await getArticleText(article.url)
+  
 
   main.innerHTML = `
   
@@ -215,6 +216,12 @@ const showArticle = async () => {
   if (document.querySelector('.article .news-content img')!== null) {
     document.querySelector('.article .news-card').style.display = "none"
   }
+
+  const videos = document.querySelectorAll('video')
+
+  videos.forEach(video=>video.setAttribute('controls','true'))
+
+
 }
 
 const getArticleText =async (url)=> {

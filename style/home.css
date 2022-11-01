@@ -16,6 +16,7 @@ body {
 .container .logo{
     flex-direction: column;
     width: 10vw;
+    cursor: pointer;
 }
 
 .logo .card-logo{
@@ -166,6 +167,10 @@ main{
     font-family: 'ubuntu';
     font-weight: bold;
     font-size: 48px;
+}
+
+.news-item {
+    cursor: pointer;
 }
 
 .news-title{

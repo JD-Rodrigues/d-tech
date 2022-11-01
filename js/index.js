@@ -13,8 +13,8 @@ onload = async ()=> {
       getAndStoreData()
       saveLastAccessTime()
   }
-  
-  fillHome()
+
+  localStorage.getItem('page') === 'article' ? showArticle(localStorage.getItem('selectedItem')) : fillHome()
 }
 const main = document.querySelector('.main')
 
@@ -193,7 +193,7 @@ const fillHome = async () => {
     showArticle()
   }))
 
-  
+  localStorage.setItem('page','home')
 
 }
 
@@ -221,7 +221,7 @@ const showArticle = async () => {
 
   videos.forEach(video=>video.setAttribute('controls','true'))
 
-
+  localStorage.setItem('page','article')
 }
 
 const getArticleText =async (url)=> {

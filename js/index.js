@@ -1,5 +1,19 @@
 onload = async ()=> {
-  // getAndStoreData()
+  if(await retrieveLastAccessTime()){
+    const date = new Date()
+    const time = date.getTime()
+    const lastAcess = await retrieveLastAccessTime()
+    console.log(time - lastAcess)
+    console.log(time - lastAcess >= 86400000)
+    if (time - lastAcess >= 86400000) {
+      getAndStoreData()
+      saveLastAccessTime()
+    }
+  } else {
+      getAndStoreData()
+      saveLastAccessTime()
+  }
+  
   fillHome()
 }
 const main = document.querySelector('.main')
@@ -8,8 +22,9 @@ const getAndStoreData = async () => {
   const data = await fetch('https://current-news.p.rapidapi.com/news/technology', {method: "GET", headers: {'X-RapidAPI-Key': 'a548e897c8mshee0452d3e73b26ep14e469jsn3125e0ca1c43',
   'X-RapidAPI-Host': 'current-news.p.rapidapi.com'}})
   const jsonData =  await data.json()
+  const filteredData = await jsonData.news.filter(article=> article.urlToImage!==null && article.description !== null)
   
-  localStorage.setItem('allData', JSON.stringify(await jsonData.news))
+  localStorage.setItem('allData', JSON.stringify(await filteredData))
 }
 
 const retrieveData = (dataName) => {
@@ -49,7 +64,7 @@ const fillHome = async () => {
   const news1List = document.querySelector('.news1-list')
   const news2List = document.querySelector('.news2-list')
   const topFiveArticles = document.querySelector('.news2-top-five')
-  const topVideosList = document.querySelector('.top-videos')
+  const darkSession = document.querySelector('.top-videos')
   const news4List = document.querySelector('.news4-list')
   const blockLateral = document.querySelector('.block-lateral')
   
@@ -118,9 +133,8 @@ const fillHome = async () => {
 
 
 
-  console.log('TOP VIDEOS')
-  for (let index = 0; index < 5; index++) {
-    allArticles.innerHTML += `
+  for (let index = 0; index < 3; index++) {
+    darkSession.innerHTML += `
     <li class="news-item" data-article = "${index}">
       <div class="news">
         <img class="news-card"
@@ -137,7 +151,7 @@ const fillHome = async () => {
   console.log('TRÊS POSTS COM LAYOUT ESTILO BLOG')
   for (let index = 6; index < 12; index++) {
     news4List.innerHTML+=`
-    <li class="news-item" data-article = "${index}">
+    <li class="last-left news-item" data-article = "${index}">
       <div class="news">
         <img class="news-card"
             src="${allArticles[index].urlToImage}"
@@ -153,6 +167,8 @@ const fillHome = async () => {
     </li>
     `
   }
+
+ 
 
   // console.log('TRÊS POSTS AO LADO DOS BLOG POSTS')
   // for (let index = 12; allArticles.length; index++) {
@@ -212,11 +228,21 @@ const getArticleText =async (url)=> {
 
   const contentJson = await content.json()
   console.log(contentJson)
-  return contentJson
-  
+  return contentJson 
   
 }
 
+const saveLastAccessTime = () => {
+  const date = new Date()
+  const time = date.getTime()
+  localStorage.setItem('last_access_time',JSON.stringify(time))
+}
+
+const retrieveLastAccessTime = async () => {
+  const prevAccessTime = localStorage.getItem('last_access_time')
+  console.log(JSON.parse(prevAccessTime))
+  return JSON.parse(prevAccessTime)
+}
 
 
 
